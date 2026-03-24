@@ -16,16 +16,19 @@ func read(filename string) string {
 }
 
 func dothings() error {
-	d, err := document.New("out.pdf")
+	d, err := document.New("out.pdf", document.WithPDFUA())
 	if err != nil {
 		return err
 	}
+
+	d.Title = "The Frog King — Complete Story"
+	d.Language = "en"
 
 	if err = d.ReadCSSFile("styles.css"); err != nil {
 		return err
 	}
 
-	if err = d.RenderPages(read("chunk.html")); err != nil {
+	if err = d.RenderPages(read("chapter1.html") + read("chapter2.html")); err != nil {
 		return err
 	}
 

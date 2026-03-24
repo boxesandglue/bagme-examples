@@ -2,13 +2,15 @@ module bagtest
 
 go 1.24.0
 
-require github.com/boxesandglue/bagme v0.0.3
+require (
+	github.com/boxesandglue/bagme v0.0.3
+	github.com/boxesandglue/boxesandglue v0.2.10
+)
 
 require (
 	github.com/PuerkitoBio/goquery v1.11.0 // indirect
 	github.com/andybalholm/cascadia v1.3.3 // indirect
 	github.com/boxesandglue/baseline-pdf v1.1.7 // indirect
-	github.com/boxesandglue/boxesandglue v0.2.10 // indirect
 	github.com/boxesandglue/csshtml v0.0.7 // indirect
 	github.com/boxesandglue/gofpdi v1.0.22 // indirect
 	github.com/boxesandglue/htmlbag v0.0.10 // indirect

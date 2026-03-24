@@ -16,10 +16,13 @@ func read(filename string) string {
 }
 
 func dothings() error {
-	d, err := document.New("out.pdf")
+	d, err := document.New("out.pdf", document.WithPDFUA())
 	if err != nil {
 		return err
 	}
+
+	d.Title = "The Frog King"
+	d.Language = "en"
 
 	if err = d.ReadCSSFile("styles.css"); err != nil {
 		return err

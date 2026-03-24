@@ -24,15 +24,8 @@ func dothings() error {
 	if err = d.ReadCSSFile("styles.css"); err != nil {
 		return err
 	}
-	pageSize, err := d.PageSize()
-	if err != nil {
-		return err
-	}
-	wd := pageSize.Width - 1*pageSize.MarginLeft - pageSize.MarginRight
-	x := pageSize.MarginLeft
-	y := pageSize.Height - pageSize.MarginTop
 
-	if err = d.OutputAt(read("chunk.html"), wd, x, y); err != nil {
+	if err = d.RenderPages(read("chunk.html")); err != nil {
 		return err
 	}
 

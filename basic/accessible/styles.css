@@ -1,3 +1,6 @@
+@import url("../../css/syntaxhighlight.css");
+@import url("../../css/a5.css");
+
 @page {
     size: a5;
     margin: 1cm;
@@ -5,19 +8,12 @@
 
 body {
     font-family: serif;
-    font-size: 10pt;
+    font-size: 12pt;
 }
 
 ol, ul {
     margin-top: 6pt;
     margin-bottom: 6pt;
-}
-
-.border {
-    border: 1pt solid;
-    border-radius: 5pt;
-    background-color: antiquewhite;
-    padding: 1rem;
 }
 
 p {
@@ -27,7 +23,6 @@ p {
 
 pre, tt, code, kbd, samp {
     font-family: monospace;
-    -bag-font-expansion: 0%;
 }
 
 .green {
