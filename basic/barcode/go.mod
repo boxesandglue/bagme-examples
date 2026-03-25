@@ -1,4 +1,4 @@
-module bagtest-table
+module bagtest-barcode
 
 go 1.24.0
 

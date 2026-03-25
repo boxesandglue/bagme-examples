@@ -8,7 +8,7 @@ import (
 )
 
 func dothings() error {
-	d, err := document.New("result.pdf", document.WithPDFUA())
+	d, err := document.New("out.pdf", document.WithPDFUA())
 	if err != nil {
 		return err
 	}

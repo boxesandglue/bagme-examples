@@ -18,7 +18,7 @@ func dothings() error {
 	// - sets PDF/A-3b format
 	// - attaches the XML as "factur-x.xml"
 	// - adds the required XMP extension schema
-	d, err := document.New("result.pdf",
+	d, err := document.New("out.pdf",
 		document.WithZUGFeRD(xmlData, "EN16931"))
 	if err != nil {
 		return err
